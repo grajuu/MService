@@ -3,6 +3,10 @@
  */
 package com.mgr.service;
 
+import com.mgr.service.accounts.AccountServer;
+import com.mgr.service.registration.RegistrationServer;
+import com.mgr.service.web.WebServer;
+
 /**
  * @author govind.raju
  *
@@ -37,7 +41,7 @@ public class MainService {
 			RegistrationServer.main(args);
 		} else if(server_name.equalsIgnoreCase("accounts")) {
 			AccountServer.main(args);
-		} else if(server_name.compareToIgnoreCase("web")) {
+		} else if(server_name.equalsIgnoreCase("web")) {
 			WebServer.main(args);
 		} else {
 			System.out.println("I dont know Server type you entered "+server_name );
